@@ -1,4 +1,4 @@
-{% set version = "6.0.1-6" %}
+{% set version = "6.0.1-7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/n1qn1_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/n1qn1/n1qn1_{{ version }}.tar.gz
-  sha256: 4769af0fa32cd2063e77dd9d4dd0abbd6e77375b9eb847b1126c55eb842c97f6
+  sha256: 1832975d330ebb104c770c232cb3a1190b85c238c1239e2c925b30731fda8cd7
 
 build:
   merge_build_host: true  # [win]
