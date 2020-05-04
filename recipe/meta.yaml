@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -27,11 +27,11 @@ requirements:
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ compiler('fortran') }}        # [not win]
     - {{ compiler('m2w64_fortran') }}  # [win]
-    - {{posix}}filesystem        # [win]
-    - {{posix}}make
-    - {{posix}}sed               # [win]
-    - {{posix}}coreutils         # [win]
-    - {{posix}}zip               # [win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - libblas                # [unix]
     - r-base
@@ -40,7 +40,7 @@ requirements:
   run:
     - libblas                # [unix]
     - r-base
-    - {{native}}gcc-libs         # [win]
+    - {{ native }}gcc-libs         # [win]
     - r-rcpp >=0.12.3
     - r-rcpparmadillo >=0.5.600.2.0
 
@@ -51,10 +51,9 @@ test:
 
 about:
   home: https://github.com/nlmixrdevelopment/n1qn1
-  license: CeCILL-2
-  summary: Provides 'Scilab' 'n1qn1', or Quasi-Newton BFGS "qn" without constraints and 'qnbd' or Quasi-Newton BFGS with constraints. This takes more memory than
-    traditional L-BFGS.  The n1qn1 routine is useful since it allows prespecification of a Hessian. If the Hessian is near enough the truth in optimization it can
-    speed up the optimization problem. Both algorithms are described in the 'Scilab' optimization documentation located at <http://www.scilab.org/content/download/250/1714/file/optimization_in_scilab.pdf>.
+  license: CECILL-2.0
+  summary: Provides 'Scilab' 'n1qn1', or Quasi-Newton BFGS "qn" without constraints and 'qnbd' or Quasi-Newton BFGS with constraints. This takes more memory than traditional L-BFGS.  The n1qn1 routine is useful since it allows prespecification of a Hessian. If the Hessian is near enough the truth in optimization it can speed
+    up the optimization problem. Both algorithms are described in the 'Scilab' optimization documentation located at <http://www.scilab.org/content/download/250/1714/file/optimization_in_scilab.pdf>.
   license_family: OTHER
 
 extra:
