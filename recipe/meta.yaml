@@ -1,4 +1,4 @@
-{% set version = "6.0.1-11" %}
+{% set version = "6.0.1-12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/n1qn1_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/n1qn1/n1qn1_{{ version }}.tar.gz
-  sha256: f276096f99015edb4d6c6e652fdbf399f47f7b6a5ea091263584330e2a47e49e
+  sha256: 622c54b40d688a4ca9c0c8580a678bfbf0ed9320696432c5024ce5cd55ddf5e5
 
 build:
-  number: 2
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
