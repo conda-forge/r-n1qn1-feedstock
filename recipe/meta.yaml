@@ -1,4 +1,4 @@
-{% set version = "6.0.1-12" %}
+{% set version = "6.0.1-13" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/n1qn1_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/n1qn1/n1qn1_{{ version }}.tar.gz
-  sha256: 622c54b40d688a4ca9c0c8580a678bfbf0ed9320696432c5024ce5cd55ddf5e5
+  sha256: 0b03fe9335ede6cc84e6e955576c644ecafbc65accd135ad336e46515c3f9e0d
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -52,8 +52,8 @@ about:
   home: https://github.com/nlmixrdevelopment/n1qn1
   license: CECILL-2.0
   license_file: LICENCE
-  summary: Provides 'Scilab' 'n1qn1', or Quasi-Newton BFGS "qn" without constraints and 'qnbd' or Quasi-Newton BFGS with constraints. This takes more memory than traditional L-BFGS.  The n1qn1 routine is useful since it allows prespecification of a Hessian. If the Hessian is near enough the truth in optimization it can speed
-    up the optimization problem. Both algorithms are described in the 'Scilab' optimization documentation located at <http://www.scilab.org/content/download/250/1714/file/optimization_in_scilab.pdf>.
+  summary: Provides 'Scilab' 'n1qn1', or Quasi-Newton BFGS "qn" without constraints and 'qnbd' or Quasi-Newton BFGS with constraints. This takes more memory than traditional L-BFGS.  The n1qn1 routine is useful since it allows prespecification of a Hessian. If the Hessian is near enough the truth in optimization it can
+    speed up the optimization problem. Both algorithms are described in the 'Scilab' optimization documentation located at <http://www.scilab.org/content/download/250/1714/file/optimization_in_scilab.pdf>.
 
 extra:
   recipe-maintainers:
